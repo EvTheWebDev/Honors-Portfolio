@@ -19,41 +19,42 @@ nav {
         list-style: none;
         a {
             color: #faf8f3;
+            text-decoration: none;
         }
     }
 }
 
 header, footer {
-    background-color: #a08f7b;
+    background-color: #6b9f7f;
     color: #faf8f3;
     padding: 2rem;
     text-align: center;
 }
 
 main {
-    max-width: 900px;
+    max-width: 90%;
     margin: 2rem auto;
     padding: 0 1.5rem;
 }
 
 h1, h2, h3 {
-    color: #5d4a3a;
+    color: #2d5a3d;
     margin-bottom: 1rem;
     font-weight: 600;
 }
 
 a {
-    color: #a0826d;
-    text-decoration: none;
+    color: #69b980;
+    text-decoration:underline;
     transition: color 0.2s;
 }
 
 a:hover {
-    color: #f0e5ca;
+    color: #c8e6d7;
 }
 
 button {
-    background-color: #a0826d;
+    background-color: #4a8f5e;
     color: #faf8f3;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -63,9 +64,34 @@ button {
 }
 
 button:hover {
-    background-color: #8b7355;
+    background-color: #3a7049;
 }
 
 section {
     margin-bottom: 3rem;
+}
+
+
+/* Home Styling */
+.leftRight {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    .left, .right {
+        padding: 10px;
+    }
+
+    .right {
+        img {
+            max-width: 400px;
+            border-radius: 8px;
+            max-height: 500px;
+        }
+    }
+}
+
+/* Then and Now Styling */
+h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
 }
