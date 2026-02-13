@@ -8,51 +8,104 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background-color: #faf8f3;
     color: #3e3e3e;
-    line-height: 1.6;
 }
 
+.wholeSite {
+    display: flex;
+    flex-direction: column;
+    min-height: 99vh;
+}
+
+/* ===== Navigation ===== */
 nav {
-    ul {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        list-style: none;
-        a {
-            color: #faf8f3;
-            text-decoration: none;
-        }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+.navTitle {
+    color: #c8e6d7;
+    transition: color 0.2s;
+    cursor: default;
+    &:hover {
+        color: #faf8f3;
     }
 }
 
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+nav ul li {
+    padding: 20px;
+}
+
+nav a {
+    color: #faf8f3;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #c8e6d7;
+}
+
+/* ===== Header & Footer ===== */
 header, footer {
     background-color: #6b9f7f;
     color: #faf8f3;
-    padding: 2rem;
     text-align: center;
 }
 
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 20px;
+    width: 100%;
+    margin: 0 auto;
+    a {
+        color: #faf8f3;
+    }
+}
+
+/* ===== Main Content ===== */
 main {
     max-width: 90%;
     margin: 2rem auto;
     padding: 0 1.5rem;
+  min-height: 81vh;
 }
 
 h1, h2, h3 {
     color: #2d5a3d;
-    margin-bottom: 1rem;
     font-weight: 600;
+}
+
+h3 {
+    margin-top: 1.5rem;
 }
 
 a {
     color: #69b980;
-    text-decoration:underline;
+    text-decoration: underline;
     transition: color 0.2s;
 }
 
-a:hover {
-    color: #c8e6d7;
+
+
+section {
+    margin-bottom: 3rem;
 }
 
+img {
+    border-radius: 8px;
+}
+
+/* ===== Buttons ===== */
 button {
     background-color: #4a8f5e;
     color: #faf8f3;
@@ -60,38 +113,125 @@ button {
     padding: 0.75rem 1.5rem;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: scale 0.2s;
+}
+
+button a {
+    color: #faf8f3;
+    text-decoration: none;
 }
 
 button:hover {
     background-color: #3a7049;
+    scale: 1.05;
 }
 
-section {
-    margin-bottom: 3rem;
-}
-
-
-/* Home Styling */
+/* ===== Home Section ===== */
 .leftRight {
     display: flex;
     justify-content: space-evenly;
-    padding: 20px;
-    .left, .right {
-        padding: 10px;
+    p {
+        flex: 1;
+        margin: 20px 0px;
     }
-
-    .right {
-        img {
-            max-width: 400px;
-            border-radius: 8px;
-            max-height: 500px;
-        }
+    img {
+        width: 100%;
     }
 }
 
-/* Then and Now Styling */
-h3 {
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
+.bigImg {
+    width: 80%;
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+.leftRight .left,
+.leftRight .right {
+    padding: 10px;
+}
+.left {
+    margin-right: 20px;
+
+}
+.right {
+    margin-left: 20px;
+}
+
+.leftRight .sqImg {
+    width: 15vw;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.leftRight img {
+    max-width: 400px;
+    max-height: 500px;
+}
+
+.buttonPannel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* ===== Projects Section ===== */
+.projects ol {
+    margin-left: 25px;
+}
+
+
+.portfolioPlug {
+    margin-top: 20px;
+    p {
+        margin-bottom: 10px;
+    }
+}
+/* ===== TV Overlay & Portfolio Preview ===== */
+.tvOverlay {
+    position: relative;
+    display: inline-block;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.tvOverlay img {
+    width: 48%;
+    height: 55%;
+    display: block;
+    position: relative;
+    z-index: 10;
+}
+
+.portfolioPreview {
+    position: absolute;
+    top: 72%;
+    left: 35%;
+    width: 48%;
+    height: 55%;
+    transform: translate(-50%, -50%);
+    border: none;
+    z-index: 5;
+    pointer-events: auto;
+}
+
+/* ===== Journey Map ===== */
+.journeyMap {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.journeyMap .step {
+    background-color: #e0f2e9;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #69b980;
+}
+
+.journeyMap img {
+    max-width: 900px;
 }
