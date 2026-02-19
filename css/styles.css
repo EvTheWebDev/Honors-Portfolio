@@ -235,3 +235,25 @@ button:hover {
 .journeyMap img {
     max-width: 900px;
 }
+
+.btn {
+    padding: 20px;
+    background-color: #69b980;
+    border-radius: 20px;
+    color: #faf8f3;
+    transition: background-color 0.2s;
+    &:hover {
+        background-color: #4a8f5e;
+    }
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin: 50px;
+    img {
+        margin-top: 200px;
+    }
+}
