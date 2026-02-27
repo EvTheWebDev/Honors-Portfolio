@@ -176,6 +176,23 @@ button:hover {
             margin-bottom: 50px;
         }
     }
+    h4 {
+        margin-top: 20px;
+    }
+    ul {
+        margin-left: 25px;
+        li {
+            margin: 5px;
+        }
+    }
+    .smallCenter {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 70%;
+        margin: 0 auto;
+        min-width: 500px;
+    }
 }
 
 .leftRight .left,
